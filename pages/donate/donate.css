@@ -1,0 +1,505 @@
+/* Donate Page — HomeWork 4 Heroes */
+
+/* ========================================
+   HERO
+   ======================================== */
+.donate-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + var(--space-3xl)) var(--container-padding) var(--space-3xl);
+  overflow: hidden;
+}
+
+.donate-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.donate-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.donate-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+}
+
+.donate-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.donate-hero__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-lg);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--color-on-primary);
+  margin-bottom: var(--space-md);
+  max-width: 42rem;
+}
+
+.donate-hero__intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: rgba(var(--color-surface-rgb, 252, 249, 244), 0.85);
+  max-width: 40rem;
+}
+
+/* ========================================
+   IMPACT STORY
+   ======================================== */
+.impact-story {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface);
+}
+
+.impact-story .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.impact-story__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+}
+
+.impact-story__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.impact-story__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.impact-story__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+}
+
+.impact-story__text p {
+  margin-bottom: var(--space-md);
+}
+
+.impact-story__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.impact-story__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.impact-story__pullquote {
+  margin-top: var(--space-lg);
+}
+
+.impact-story__pullquote blockquote {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.impact-story__pullquote blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+}
+
+/* ========================================
+   DONATION TIERS
+   ======================================== */
+.donation-tiers {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface-container-low);
+}
+
+.donation-tiers .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.donation-tiers__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.donation-tiers__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.donation-tiers__intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  max-width: 40rem;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.donation-tiers__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: stretch;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Standard tier card */
+.tier-card {
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-base);
+  position: relative;
+}
+
+.tier-card:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+/* Featured tier — $100 */
+.tier-card--featured {
+  background-color: var(--color-surface-container-lowest);
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.02);
+  z-index: 1;
+  padding-top: calc(var(--space-xl) + 12px);
+}
+
+.tier-card--featured::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.tier-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  font-family: var(--font-label);
+  font-size: var(--text-label-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.tier-card__amount {
+  font-family: var(--font-headline);
+  font-size: var(--text-display-lg);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.tier-card__name {
+  font-family: var(--font-label);
+  font-size: var(--text-label-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-md);
+}
+
+.tier-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-lg);
+  flex: 1;
+}
+
+/* Transparency stat callout */
+.donation-tiers__stat {
+  background-color: rgba(var(--color-surface-tint-rgb), 0.1);
+  border-radius: var(--radius-full);
+  padding: var(--space-sm) var(--space-lg);
+  display: inline-block;
+  margin: var(--space-lg) auto 0;
+  text-align: center;
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.donation-tiers__stat-wrap {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* ========================================
+   RECURRING GIVING
+   ======================================== */
+.recurring {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface);
+}
+
+.recurring .container {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recurring__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.recurring__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+}
+
+.recurring__amounts {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-regular);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-lg);
+}
+
+/* ========================================
+   CORPORATE SPONSORSHIP
+   ======================================== */
+.corporate {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface-container-low);
+}
+
+.corporate .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.corporate__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+}
+
+.corporate__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.corporate__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.corporate__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-lg);
+}
+
+.corporate__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.corporate__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================
+   TAX DEDUCTION & TRANSPARENCY
+   ======================================== */
+.tax-info {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface);
+}
+
+.tax-info .container {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tax-info__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.tax-info__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+}
+
+.tax-info__ein {
+  font-family: var(--font-label);
+  font-size: var(--text-title-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+}
+
+/* ========================================
+   CLOSING CTA
+   ======================================== */
+.donate-closing-cta {
+  padding: var(--section-padding) var(--container-padding);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  text-align: center;
+}
+
+.donate-closing-cta .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.donate-closing-cta__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-on-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.donate-closing-cta__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: rgba(var(--color-surface-rgb, 252, 249, 244), 0.85);
+  max-width: 36rem;
+  margin: 0 auto var(--space-lg);
+}
+
+.donate-closing-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+/* ========================================
+   RESPONSIVE — DESKTOP
+   ======================================== */
+@media (min-width: 769px) {
+  .impact-story__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .donation-tiers__grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .tier-card--featured {
+    transform: scale(1.05);
+  }
+
+  .corporate__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}

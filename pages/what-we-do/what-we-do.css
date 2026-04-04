@@ -1,0 +1,355 @@
+/* What We Do Page — HomeWork 4 Heroes */
+
+/* ========================================
+   HERO
+   ======================================== */
+.wwd-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + var(--space-3xl)) var(--container-padding) var(--space-3xl);
+  overflow: hidden;
+}
+
+.wwd-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.wwd-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wwd-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+}
+
+.wwd-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.wwd-hero__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-lg);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  color: var(--color-on-primary);
+  margin-bottom: var(--space-md);
+  max-width: 42rem;
+}
+
+.wwd-hero__intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: rgba(var(--color-surface-rgb, 252, 249, 244), 0.85);
+  max-width: 40rem;
+}
+
+/* ========================================
+   SERVICES BREAKDOWN
+   ======================================== */
+.services {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface);
+}
+
+.services .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* Individual service block with alternating layout */
+.service-block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.service-block:last-child {
+  margin-bottom: 0;
+}
+
+.service-block__content {
+  order: 2;
+}
+
+.service-block__image {
+  order: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.service-block__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.service-block__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.service-block__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+}
+
+.service-block__projects-label {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+}
+
+.service-block__projects {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-on-surface-variant);
+}
+
+/* Section divider — tonal shift between service blocks */
+.service-divider {
+  height: 1px;
+  background-color: transparent;
+  margin: 0 0 var(--space-3xl) 0;
+}
+
+/* ========================================
+   PROJECT PORTFOLIO / GALLERY
+   ======================================== */
+.portfolio {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface-container-low);
+}
+
+.portfolio .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.portfolio__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.portfolio__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.portfolio__intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  max-width: 40rem;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+/* Gallery placeholder grid */
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.portfolio__placeholder {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-surface-container-highest);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-md);
+  font-family: var(--font-label);
+  font-size: var(--text-label-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+}
+
+/* ========================================
+   STUDENT AMBASSADOR SPOTLIGHT
+   ======================================== */
+.ambassador {
+  padding: var(--section-padding) var(--container-padding);
+  background-color: var(--color-surface);
+}
+
+.ambassador .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.ambassador__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.ambassador__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.ambassador__intro {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--color-on-surface);
+  max-width: 48rem;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.ambassador__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.ambassador__placeholder-card {
+  background-color: var(--color-surface-container-low);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+  line-height: var(--leading-relaxed);
+}
+
+.ambassador__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.ambassador__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================
+   CLOSING CTA
+   ======================================== */
+.wwd-closing-cta {
+  padding: var(--section-padding) var(--container-padding);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  text-align: center;
+}
+
+.wwd-closing-cta .container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.wwd-closing-cta__headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-on-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.wwd-closing-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+/* ========================================
+   RESPONSIVE — DESKTOP
+   ======================================== */
+@media (min-width: 769px) {
+  .service-block {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Alternate image position: odd = image left, even = image right */
+  .service-block:nth-child(odd) .service-block__content {
+    order: 2;
+  }
+
+  .service-block:nth-child(odd) .service-block__image {
+    order: 1;
+  }
+
+  .service-block:nth-child(even) .service-block__content {
+    order: 1;
+  }
+
+  .service-block:nth-child(even) .service-block__image {
+    order: 2;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ambassador__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}

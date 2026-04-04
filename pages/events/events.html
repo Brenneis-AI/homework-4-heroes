@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | HomeWork 4 Heroes Volunteer Events</title>
+  <meta name="description" content="Find upcoming HomeWork 4 Heroes volunteer events, project days, and community gatherings in Central Virginia. See past highlights and sign up for the next one.">
+  <link rel="canonical" href="https://homework4heroes.org/events">
+  <meta property="og:title" content="Events | HomeWork 4 Heroes Volunteer Events">
+  <meta property="og:description" content="Find upcoming HomeWork 4 Heroes volunteer events, project days, and community gatherings in Central Virginia. See past highlights and sign up for the next one.">
+  <meta property="og:url" content="https://homework4heroes.org/events">
+  <link rel="stylesheet" href="../../global/brand.css">
+  <link rel="stylesheet" href="../../global/global.css">
+  <link rel="stylesheet" href="events.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script src="../../global/nav.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Events — HomeWork 4 Heroes",
+    "description": "Upcoming volunteer events and past project highlights from HomeWork 4 Heroes in Central Virginia.",
+    "url": "https://homework4heroes.org/pages/events/events.html"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="../../index.html" class="site-header__wordmark">HomeWork 4 Heroes</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../../pages/about/about.html" class="site-nav__link">About</a>
+        <a href="../../pages/what-we-do/what-we-do.html" class="site-nav__link">What We Do</a>
+        <a href="../../pages/get-help/get-help.html" class="site-nav__link">Get Help</a>
+        <a href="../../pages/volunteer/volunteer.html" class="site-nav__link">Volunteer</a>
+        <a href="../../pages/events/events.html" class="site-nav__link">Events</a>
+        <a href="../../pages/contact/contact.html" class="site-nav__link">Contact</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="../../pages/volunteer/volunteer.html" class="nav-volunteer-link">Volunteer</a>
+        <a href="../../pages/donate/donate.html" class="btn-primary nav-donate-btn">Donate</a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="events-hero">
+      <div class="events-hero__bg">
+        <img src="https://images.unsplash.com/photo-1593896385987-16bcbf9451e5?w=1600&q=85" alt="Community members gathering outdoors at a neighborhood event" width="1600" height="900" loading="eager">
+        <div class="events-hero__overlay"></div>
+      </div>
+      <div class="container events-hero__content">
+        <h1 class="events-hero__h1">Where the Community Comes Together</h1>
+        <p class="events-hero__subhead">Project Days. Community Gatherings. The Work in Action.</p>
+        <p class="events-hero__body">Events are where HomeWork 4 Heroes comes to life — where students meet the families they'll serve, where donors see their contributions at work, and where the community shows up for each other. Whether you're volunteering for the first time or coming back for your tenth project, this is where it starts.</p>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="section section--surface" aria-labelledby="upcoming-heading">
+      <div class="container">
+        <span class="section-eyebrow">Upcoming</span>
+        <h2 id="upcoming-heading" class="section-headline">Upcoming Events</h2>
+
+        <!-- Empty state — displayed when no upcoming events exist -->
+        <div class="events-empty-state">
+          <span class="material-symbols-outlined events-empty-state__icon" aria-hidden="true">event</span>
+          <p class="events-empty-state__text">We're planning our next round of projects and community events now. Sign up for the newsletter below and we'll let you know as soon as dates are locked in.</p>
+          <a href="#newsletter" class="btn-secondary">Join the Newsletter</a>
+        </div>
+
+        <!-- Event cards — hidden until events exist. Template for future use:
+        <div class="events-card-grid">
+          <article class="event-card">
+            <div class="event-card__date">
+              <span class="event-card__month">MAR</span>
+              <span class="event-card__day">15</span>
+            </div>
+            <div class="event-card__details">
+              <h3 class="event-card__title">Event Name</h3>
+              <p class="event-card__meta"><span class="material-symbols-outlined" aria-hidden="true">location_on</span> Location</p>
+              <p class="event-card__body">Brief description of the event.</p>
+              <a href="#" class="btn-primary btn-nav">Sign Up for This Event</a>
+            </div>
+          </article>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- Past Events / Highlights -->
+    <section class="section section--surface-low" aria-labelledby="past-events-heading">
+      <div class="container">
+        <span class="section-eyebrow">Past Events</span>
+        <h2 id="past-events-heading" class="section-headline">What We've Been Up To</h2>
+        <p class="section-intro">Every event listed here represents real students, real families, and real work completed. If you missed it, there's always next time.</p>
+
+        <!-- Placeholder gallery — client must provide actual event photography -->
+        <div class="past-events-gallery">
+          <div class="img-placeholder" data-label="CLIENT TO PROVIDE: Event photo — [Event name], [Date]">
+            <span class="material-symbols-outlined" aria-hidden="true">photo_library</span>
+          </div>
+          <div class="img-placeholder" data-label="CLIENT TO PROVIDE: Event photo — [Event name], [Date]">
+            <span class="material-symbols-outlined" aria-hidden="true">photo_library</span>
+          </div>
+          <div class="img-placeholder" data-label="CLIENT TO PROVIDE: Event photo — [Event name], [Date]">
+            <span class="material-symbols-outlined" aria-hidden="true">photo_library</span>
+          </div>
+          <div class="img-placeholder" data-label="CLIENT TO PROVIDE: Event photo — [Event name], [Date]">
+            <span class="material-symbols-outlined" aria-hidden="true">photo_library</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section section--surface" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container container--narrow newsletter-section">
+        <h2 id="newsletter-heading" class="section-headline">Be the First to Know</h2>
+        <p class="newsletter-intro">Get updates on upcoming events, volunteer opportunities, and the impact your community is making — delivered straight to your inbox. No spam. Just the mission.</p>
+        <form name="events-newsletter" method="POST" data-netlify="true" class="newsletter-form">
+          <input type="hidden" name="form-name" value="events-newsletter">
+          <div class="newsletter-form__row">
+            <label for="nl-email" class="visually-hidden">Email address</label>
+            <input type="email" id="nl-email" name="email" placeholder="Your email address" required class="form-input newsletter-form__input">
+            <button type="submit" class="btn-primary newsletter-form__btn">Sign Me Up</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="section section--primary" aria-labelledby="events-closing-heading">
+      <div class="container container--narrow closing-cta">
+        <h2 id="events-closing-heading" class="section-headline section-headline--light">Want to Volunteer at Our Next Event?</h2>
+        <p class="closing-cta__body">You don't need experience. You don't need tools. Just show up and we'll put you to work.</p>
+        <a href="../volunteer/volunteer.html" class="btn-ghost">Sign Up to Volunteer</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__grid">
+      <div>
+        <span class="site-footer__wordmark">HomeWork 4 Heroes</span>
+        <p class="site-footer__desc">A 501(c)(3) nonprofit organization.</p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="Facebook">
+            <span class="material-symbols-outlined" aria-hidden="true">group</span>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="Instagram">
+            <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="site-footer__heading">Explore</h3>
+        <nav class="site-footer__links" aria-label="Explore links">
+          <a href="../../pages/about/about.html" class="site-footer__link">About</a>
+          <a href="../../pages/what-we-do/what-we-do.html" class="site-footer__link">What We Do</a>
+          <a href="../../pages/events/events.html" class="site-footer__link">Events</a>
+          <a href="../../pages/contact/contact.html" class="site-footer__link">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="site-footer__heading">Get Involved</h3>
+        <nav class="site-footer__links" aria-label="Get involved links">
+          <a href="../../pages/volunteer/volunteer.html" class="site-footer__link">Volunteer</a>
+          <a href="../../pages/donate/donate.html" class="site-footer__link">Donate</a>
+          <a href="../../pages/get-help/get-help.html" class="site-footer__link">Get Help</a>
+        </nav>
+      </div>
+      <div>
+        <h3 class="site-footer__heading">Service Area</h3>
+        <p class="site-footer__area-text">Serving Central Virginia</p>
+        <p class="site-footer__ein">EIN: [PLACEHOLDER]</p>
+        <div class="footer-newsletter">
+          <label class="footer-newsletter__label" for="footer-email-events">Stay connected with the mission.</label>
+          <form class="footer-newsletter__form" name="newsletter-events" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter-events">
+            <input type="email" id="footer-email-events" name="email" class="footer-newsletter__input" placeholder="Your email address" required aria-label="Email address">
+            <button type="submit" class="btn-primary footer-newsletter__btn">Sign Up</button>
+          </form>
+          <p class="footer-newsletter__msg footer-newsletter__msg--success">You're in. We'll keep you posted on upcoming projects, events, and ways to get involved.</p>
+          <p class="footer-newsletter__msg footer-newsletter__msg--error">Something went wrong — try again, or email us directly at [PLACEHOLDER — contact email].</p>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; <span id="copyright-year"></span> HomeWork 4 Heroes</p>
+      <div class="site-footer__legal">
+        <a href="#" class="site-footer__legal-link">Privacy Policy</a>
+        <a href="#" class="site-footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
